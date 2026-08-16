@@ -1,0 +1,11 @@
+file_format: "1"
+id: googootkah
+name: GooGooTkah
+type: shield
+url: https://github.com/kizanbg/googootkah/
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - googootkah_left
+  - googootkah_right
