@@ -5,18 +5,46 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
-/* Layer definicije za my_lt pozive */
+/* Layer definicije */
 #define DEF 0
+#define BAS 0
 #define NUM 1
 #define NAV 2
 #define SYM 3
 #define FUN 4
 
-/* Homerow mods timing */
+/* Timing */
 #define TAPPING_TERM 200
 #define QUICK_TAP_MS 0
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT, LAYERS) \
+            combo_##NAME { \
+                timeout-ms = <TIMEOUT>; \
+                bindings = <BINDINGS>; \
+                key-positions = <KEYPOS>; \
+                layers = <LAYERS>; \
+                slow-release; \
+            };
+
+        #define DEFAULT_TIME 64
+        #define LONG_TIME    128
+
+        #define ALL_LAYERS     BAS NUM FUN SYM NAV
+        #define DEFAULT_LAYERS BAS NUM FUN SYM NAV
+        #define NONBASE_LAYERS     NUM FUN SYM NAV
+
+        COMBO(z,     &kp Y,       4   5, DEFAULT_TIME, DEFAULT_LAYERS)
+        COMBO(q,     &kp Q,       0   1, DEFAULT_TIME, DEFAULT_LAYERS)
+        COMBO(g,     &kp G,      10  11, DEFAULT_TIME, DEFAULT_LAYERS)
+        COMBO(tab,   &kp TAB,     8   9, DEFAULT_TIME, DEFAULT_LAYERS)
+        COMBO(esc,   &kp ESC,     10   11, DEFAULT_TIME, DEFAULT_LAYERS)
+        COMBO(enter, &kp ENTER,  25  23, DEFAULT_TIME, DEFAULT_LAYERS)
+    };
+
     macros {
         ipad_tile_left: ipad_tile_left {
             label = "ipad_tile_left";
