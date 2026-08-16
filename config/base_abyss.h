@@ -39,10 +39,10 @@
 
         COMBO(z,     &kp Y,       4   5, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(q,     &kp Q,       0   1, DEFAULT_TIME, DEFAULT_LAYERS)
-        COMBO(g,     &kp G,      10  11, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(tab,   &kp TAB,     8   9, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(esc,   &kp ESC,     10   11, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(enter, &kp ENTER,  25  23, DEFAULT_TIME, DEFAULT_LAYERS)
+        COMBO(slash, &kp SLASH, 24 23, DEFAULT_TIME, DEFAULT_LAYERS)
     };
 
     macros {
