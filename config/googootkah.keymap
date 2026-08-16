@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #endif
 
-#include "base_abyss.h"
+#include "config/base_abyss.h"
 
 // abyss key numbers
 //  ___________________________   __________________________
