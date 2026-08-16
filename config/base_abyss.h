@@ -5,6 +5,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
+/* Layer definicije za my_lt pozive */
+#define DEF 0
+#define NUM 1
+#define NAV 2
+#define SYM 3
+#define FUN 4
+
 /* Homerow mods timing */
 #define TAPPING_TERM 200
 #define QUICK_TAP_MS 0
