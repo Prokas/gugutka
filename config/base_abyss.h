@@ -10,6 +10,45 @@
 #define QUICK_TAP_MS 0
 
 / {
+    macros {
+        ipad_tile_left: ipad_tile_left {
+            label = "ipad_tile_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        ipad_tile_right: ipad_tile_right {
+            label = "ipad_tile_right";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        ipad_tile_fullscreen: ipad_tile_fullscreen {
+            label = "ipad_tile_fullscreen";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp F>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
+
     behaviors {
         hl: homerow_left {
             compatible = "zmk,behavior-hold-tap";
@@ -59,29 +98,6 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-
-    macros {
-        ipad_tile_left: ipad_tile_left {
-            label = "ipad_tile_left";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(LEFT))>;
-        };
-
-        ipad_tile_right: ipad_tile_right {
-            label = "ipad_tile_right";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(RIGHT))>;
-        };
-
-        ipad_tile_fullscreen: ipad_tile_fullscreen {
-            label = "ipad_tile_fullscreen";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(F))>;
         };
     };
 };
