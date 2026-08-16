@@ -2,18 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
-    - name: nguyendown
-      url-base: https://github.com/nguyendown
   projects:
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: main
-    #   import: app/west.yml
     - name: zmk
-      remote: nguyendown
-      revision: behaviors/sticky-key-deactivate-after-hold
+      remote: zmkfirmware
+      revision: v0.3.0
       import: app/west.yml
   self:
     path: config
