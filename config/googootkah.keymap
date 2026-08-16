@@ -58,18 +58,6 @@
 
             >;
          };
-#ifdef ZILPZALP_BLE_FLAG
-        function {
-            label = "FUN";
-
-            bindings = <
-                                    &kp SQT    &kp SEMICOLON   &kp LEFT_BRACKET &kp RIGHT_BRACKET     &kp RIGHT_BRACKET         &bt BT_SEL 1          &bt BT_SEL 2         &bt BT_CLR_ALL  
-                                    &trans      &trans         &out OUT_TOG         &kp BACKSLASH     &kp F11        &kp F4         &kp F5         &kp F6         
-                   &kp LC(LG(Q))       &trans          &trans          &none  &bt BT_CLR     &bt BT_NXT          &trans         &trans             &kp F1         &kp F2         &kp F3  &kp F10
-                                                             
-            >;
-#endif
-#ifndef ZILPZALP_BLE_FLAG
         function {
             label = "FUN";
 
@@ -79,9 +67,6 @@
                     &kp LC(LG(Q))     &bt BT_SEL 1          &bt BT_SEL 2         &bt BT_SEL 3          &bt BT_CLR        &bt BT_NXT       &kp F12        &none       &kp F1         &kp F2         &kp F3   &trans 
                                                            
             >;
-           
-         
-#endif
         };
 
     };
