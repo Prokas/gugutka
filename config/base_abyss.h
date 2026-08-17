@@ -15,7 +15,7 @@
 
 /* Timing */
 #define TAPPING_TERM 230
-#define QUICK_TAP_MS 0
+#define QUICK_TAP_MS 30
 
 / {
     combos {
