@@ -14,7 +14,7 @@
 #define FUN 4
 
 /* Timing */
-#define TAPPING_TERM 230
+#define TAPPING_TERM 300
 #define QUICK_TAP_MS 125
 
 / {
@@ -89,9 +89,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow left mods";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
-            flavor = "balanced";
+            tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
             hold-trigger-on-release;
@@ -101,9 +101,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow right mods";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
-            flavor = "balanced";
+            tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
             hold-trigger-on-release;
@@ -113,9 +113,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "my layer tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
-            flavor = "balanced";
+            tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
 
