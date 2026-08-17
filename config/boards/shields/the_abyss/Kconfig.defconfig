@@ -1,13 +1,16 @@
 if SHIELD_GOOGOOTKAH_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Googootkah"
+    default "GooGooTkah"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 endif
 
-if SHIELD_GOOGOOTKAH_RIGHT
+if SHIELD_GOOGOOTKAH_LEFT || SHIELD_GOOGOOTKAH_RIGHT
 
-config ZMK_KEYBOARD_NAME
-    default "Googootkah"
+config ZMK_SPLIT
+    default y
 
 endif
