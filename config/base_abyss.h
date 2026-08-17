@@ -14,8 +14,8 @@
 #define FUN 4
 
 /* Timing */
-#define TAPPING_TERM 300
-#define QUICK_TAP_MS 125
+#define TAPPING_TERM 200
+#define QUICK_TAP_MS 0
 
 / {
     combos {
@@ -40,7 +40,7 @@
         COMBO(z,     &kp Y,       4   5, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(q,     &kp Q,       0   1, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(tab,   &kp TAB,     8   9, DEFAULT_TIME, DEFAULT_LAYERS)
-        COMBO(esc,   &kp ESC,     17   19, DEFAULT_TIME, DEFAULT_LAYERS)  
+        COMBO(esc,   &kp ESC,     17   19, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(enter, &kp ENTER,  24  26, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(QMARK, &kp QMARK, 25 26, DEFAULT_TIME, DEFAULT_LAYERS)
     };
@@ -91,7 +91,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
             hold-trigger-on-release;
@@ -103,7 +103,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
             hold-trigger-on-release;
@@ -113,9 +113,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "my layer tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            quick-tap-ms = <QUICK_TAP_MS>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
             bindings = <&mo>, <&kp>;
         };
 
