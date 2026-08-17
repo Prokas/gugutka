@@ -39,7 +39,7 @@
         symbols {
             label = "SYM";
             bindings = <
-&kp LBRC  &kp RBRC  &kp LPAR  &kp RPAR  &none  &none  &none  &none  &kp AT  &kp HASH  &kp DOLLAR  &none  &none  &kp AMPERSAND  &kp ASTERISK  &kp PERCENT  &kp EXCL  &kp GRAVE  &kp DQT  &kp UNDERSCORE  &kp TILDE  &trans  &trans  &trans  &kp BACKSLASH  &kp PIPE  &kp EQUAL  &kp CARET
+&kp LBRC  &kp RBRC  &kp LPAR  &kp RPAR  &none  &none  &none  &none  &kp AT  &kp HASH  &kp DOLLAR  &kp SLASH  &none  &kp AMPERSAND  &kp ASTERISK  &kp PERCENT  &kp EXCL  &kp GRAVE  &kp DQT  &kp UNDERSCORE  &kp TILDE  &trans  &trans  &trans  &kp BACKSLASH  &kp PIPE  &kp EQUAL  &kp CARET
             >;
         };
 
