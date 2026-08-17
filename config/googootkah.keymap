@@ -50,16 +50,16 @@
 
         #ifdef ZILPZALP_BLE_FLAG
 
-        function {
-            label = "FUN";
+        BT {
+            label = "bt";
             bindings = <
-&kp SQT  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_BRACKET  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL  &trans  &trans  &none  &kp BACKSLASH  &none  &none  &none  &none  &kp LC(LG(Q))  &trans  &trans  &none  &none  &none  &trans  &trans  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL  &trans  &trans  &none  &none  &none  &none  &none  &none  &kp LC(LG(Q))  &trans  &trans  &none  &none  &none  &trans  &trans  &none  &none  &none  &none
             >;
         };
 
         #else
 
-        function {
+        Latin+F {
             label = "FUN";
             bindings = <
 &kp SQT  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F10  &kp F7  &kp F8  &kp F9  &none  &none  &none  &kp BACKSLASH  &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(LG(Q))  &none  &none  &none  &none  &none  &kp F12  &none  &kp F1  &kp F2  &kp F3  &trans
