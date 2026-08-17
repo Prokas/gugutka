@@ -37,7 +37,7 @@
         navigation {
             label = "NAV";
             bindings = <
-&ipad_tile_fullscreen  &ipad_tile_left  &ipad_tile_right  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE  &kp LESS_THAN  &kp GREATER_THAN  &kp LA(LC(LG(UP_ARROW)))  &sk LGUI  &sk LSHFT  &kp LG(C)  &kp C_MUTE  &none  &none  &kp UP  &kp LG(LC(LA(M)))  &kp LC(LA(LG(LEFT)))  &kp LA(LC(LG(RIGHT)))  &none  &kp LG(V)  &kp LA(LC(LG(RIGHT)))  &kp PLUS  &kp MINUS  &none  &kp LEFT_ARROW  &kp DOWN  &kp LEFT
+&ipad_tile_fullscreen  &ipad_tile_left  &ipad_tile_right  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE  &kp LESS_THAN  &kp GREATER_THAN  &kp LA(LC(LG(UP_ARROW)))  &sk LGUI  &sk LSHFT  &kp LG(C)  &kp C_MUTE  &none  &none  &kp UP  &kp LG(LC(LA(M)))  &kp LC(LA(LG(LEFT)))  &kp LA(LC(LG(RIGHT)))  &none  &kp LG(V)  &kp LA(LC(LG(RIGHT)))  &kp PLUS  &kp MINUS  &none  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT
             >;
         };
 
