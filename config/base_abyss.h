@@ -41,6 +41,7 @@
         COMBO(q,     &kp Q,       0   1, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(tab,   &kp TAB,     8   9, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(esc,   &kp ESC,     17   19, DEFAULT_TIME, DEFAULT_LAYERS)
+        COMBO(enter, &kp ENTER,  18  19, DEFAULT_TIME, DEFAULT_LAYERS)   
         COMBO(enter, &kp ENTER,  24  26, DEFAULT_TIME, DEFAULT_LAYERS)
         COMBO(QMARK, &kp QMARK, 25 26, DEFAULT_TIME, DEFAULT_LAYERS)
     };
