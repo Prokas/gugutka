@@ -59,7 +59,7 @@
 
         #else
 
-        Latin+F {
+        LatinF {
             label = "FUN";
             bindings = <
 &kp SQT  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F10  &kp F7  &kp F8  &kp F9  &none  &none  &none  &kp BACKSLASH  &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(LG(Q))  &none  &none  &none  &none  &none  &kp F12  &none  &kp F1  &kp F2  &kp F3  &trans
