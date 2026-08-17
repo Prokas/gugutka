@@ -14,7 +14,7 @@
 #define FUN 4
 
 /* Timing */
-#define TAPPING_TERM 200
+#define TAPPING_TERM 230
 #define QUICK_TAP_MS 0
 
 / {
