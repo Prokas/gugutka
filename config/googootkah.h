@@ -11,7 +11,7 @@
 #define NUM 1
 #define NAV 2
 #define SYM 3
-#define FUN 4
+#define LAT 4
 
 /* Timing */
 #define TAPPING_TERM 200
