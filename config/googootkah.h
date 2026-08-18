@@ -40,7 +40,7 @@
         COMBO(z,     &kp Y,       4   5, DEFAULT_TIME, BAS)
         COMBO(q,     &kp Q,       0   1, DEFAULT_TIME, BAS)
         COMBO(tab,   &kp TAB,     8   9, DEFAULT_TIME, BAS)
-        COMBO(esc,   &kp ESC,     17   19, DEFAULT_TIME, BAS)
+        COMBO(esc,   &kp ESC,     18   19, DEFAULT_TIME, BAS)
         COMBO(enter, &kp ENTER,  24  26, DEFAULT_TIME, BAS)
         COMBO(QMARK, &kp QMARK, 25 26, DEFAULT_TIME, BAS)
     };
