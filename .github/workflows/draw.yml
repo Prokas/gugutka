@@ -2,8 +2,7 @@ name: Draw Keymap
 on:
   push:
     paths:
-      - 'config/boards/shields/googootkah/*.keymap'
-      - 'config/boards/shields/googootkah/info.json'
+      - 'keymap.yaml'
       - '.github/workflows/draw.yml'
   workflow_dispatch:
 
@@ -19,12 +18,7 @@ jobs:
 
       - run: pip install keymap-drawer
 
-      - run: |
-          keymap parse -z config/boards/shields/googootkah/googootkah.keymap \
-            --base-keymaps config/boards/shields/googootkah/info.json \
-            > keymap.yaml
-
-      - run: keymap draw keymap.yaml > keymap.svg
+      - run: keymap draw keymap.yaml --j-layouts config/info.json > keymap.svg
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
