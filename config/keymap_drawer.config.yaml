@@ -1,0 +1,11 @@
+draw_config:
+  key_w: 60.0
+  key_h: 56.0
+
+parse_config:
+  preprocess: true
+
+
+layout:
+  cols: 8
+  rows: 4
