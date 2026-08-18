@@ -12,7 +12,7 @@
 #define NAV 2
 #define SYM 3
 #define BT  4
-#define FUN 5
+#define LAT 5
 
 /* Timing */
 #define TAPPING_TERM 200
@@ -34,9 +34,9 @@
         #define DEFAULT_TIME 64
         #define LONG_TIME    128
 
-        #define ALL_LAYERS     BAS NUM FUN SYM NAV
-        #define DEFAULT_LAYERS BAS NUM FUN SYM NAV
-        #define NONBASE_LAYERS     NUM FUN SYM NAV
+        #define ALL_LAYERS     BAS NUM NAV SYM BT LAT
+        #define DEFAULT_LAYERS BAS
+        #define NONBASE_LAYERS NUM NAV SYM BT LAT
 
         COMBO(z,     &kp Y,       4   5, DEFAULT_TIME, BAS)
         COMBO(q,     &kp Q,       0   1, DEFAULT_TIME, BAS)
