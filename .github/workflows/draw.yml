@@ -1,40 +1,32 @@
-name: "Draw Keymap"
+name: Draw Keymap
 on:
   push:
     paths:
-      - "config/**"
-      - ".github/workflows/draw.yml"
+      - 'config/boards/shields/googootkah/*.keymap'
+      - 'config/boards/shields/googootkah/info.json'
+      - '.github/workflows/draw.yml'
   workflow_dispatch:
 
 jobs:
   draw:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: '3.11'
 
-      - name: Install Keymap Drawer
-        run: pip install keymap-drawer
+      - run: pip install keymap-drawer
 
-      - name: Parse ZMK Keymap using local info.json
-        run: |
-          keymap parse \
-            -z config/boards/shields/googootkah/googootkah.keymap \
+      - run: |
+          keymap parse -z config/boards/shields/googootkah/googootkah.keymap \
             --base-keymaps config/boards/shields/googootkah/info.json \
             > keymap.yaml
 
-      - name: Draw SVG
-        run: keymap draw keymap.yaml > keymap.svg
+      - run: keymap draw keymap.yaml > keymap.svg
 
-      - name: Commit and push generated SVG
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add keymap.svg keymap.yaml
-          git commit -m "auto: update keymap SVG [skip ci]" || exit 0
-          git push
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Auto-update keymap SVG'
