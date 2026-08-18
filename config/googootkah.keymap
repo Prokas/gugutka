@@ -19,54 +19,42 @@
         default {
             label = "DEF";
             bindings = <
-/* Top (0-3 | 17-14) */             &kp W         &kp E         &kp R          &kp T                                                            &kp L         &hr LALT K    &hr RGUI J    &hr RSHFT N
-/* Mid (4-7 | 21-18) */             &hl LALT S    &hl LGUI D    &hl LSHFT F    &hl RALT G                                                       &comsem        &dotcol       &hr RCTRL P   &hr RALT G
-/* Low Left (8-13) & Right (27-22)*/ &hl LCTRL A   &kp C         &kp V          &kp B          &my_lt NUM X    &my_lt NAV SPACE   &hr RCTRL P    &dotcol       &comsem       &kp M         &my_lt FUN H  &my_lt SYM BSPC
+&kp W  &kp E  &kp R  &kp T  &kp Z  &kp U  &kp I  &kp O  &hl LALT S  &hl LGUI D  &hl LSHFT F  &hl RALT G  &hr RALT N  &hr RSHFT J  &hr RGUI K  &hr LALT L  &hl LCTRL A  &kp C  &kp V  &kp B  &my_lt NUM X  &my_lt NAV SPACE  &my_lt SYM BSPC  &my_lt FUN H  &kp M  &comsem  &dotcol  &hr RCTRL P
             >;
         };
 
         numbers {
             label = "NUM";
             bindings = <
-/* Top (0-3 | 17-14) */             &kp TAB       &kp LG(M)     &none          &kp LC(UP)                                                       &none         &kp N6        &kp N5        &kp N4
-/* Mid (4-7 | 21-18) */             &hl LALT KP_MINUS &hl LGUI KP_ASTERISK &hl LSHFT KP_SLASH &kp RALT                                            &none         &kp N3        &kp N2        &kp N1
-/* Low Left (8-13) & Right (27-22)*/ &hl LCTRL KP_PLUS &none       &none          &none          &trans          &trans             &none          &kp N3        &kp N2        &kp N1        &kp N0        &none
+&kp TAB  &kp LG(M)  &none  &kp LC(UP)  &none  &kp N7  &kp N8  &kp N9  &hl LALT KP_MINUS  &hl LGUI KP_ASTERISK  &hl LSHFT KP_SLASH  &kp RALT  &none  &kp N4  &kp N5  &kp N6  &hl LCTRL KP_PLUS  &none  &none  &none  &trans  &trans  &none  &kp N0  &kp N1  &kp N2  &kp N3  &none
             >;
         };
 
         navigation {
             label = "NAV";
             bindings = <
-/* Top (0-3 | 17-14) */             &none         &none         &kp DEL        &kp C_VOL_DN                                                     &none         &kp UP        &none         &none
-/* Mid (4-7 | 21-18) */             &kp LA(LC(LG(UP_ARROW))) &sk LGUI &sk LSHFT &kp LG(C)                                                         &none         &kp LA(LC(LG(RIGHT))) &kp LA(LC(LG(LEFT))) &kp LG(LC(LA(M)))
-/* Low Left (8-13) & Right (27-22)*/ &kp C_MUTE    &kp C_VOL_UP  &kp C_PLAY_PAUSE &kp LESS_THAN &kp GREATER_THAN &kp LG(V)          &kp RIGHT      &kp DOWN      &kp LEFT_ARROW &none        &kp MINUS     &kp PLUS
+&none  &none  &kp DEL  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE  &kp LESS_THAN  &kp GREATER_THAN  &kp LA(LC(LG(UP_ARROW)))  &sk LGUI  &sk LSHFT  &kp LG(C)  &kp C_MUTE  &none  &none  &kp UP  &kp LG(LC(LA(M)))  &kp LC(LA(LG(LEFT)))  &kp LA(LC(LG(RIGHT)))  &none  &kp LG(V)  &kp LA(LC(LG(RIGHT)))  &kp PLUS  &kp MINUS  &none  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT
             >;
         };
 
         symbols {
             label = "SYM";
             bindings = <
-/* Top (0-3 | 17-14) */             &kp LBRC      &kp RBRC      &kp LPAR       &kp RPAR                                                         &kp CARET     &kp EQUAL     &kp PIPE      &kp BACKSLASH
-/* Mid (4-7 | 21-18) */             &kp AT        &kp HASH      &kp DOLLAR     &none                                                            &kp UNDERSCORE &kp DQT      &kp GRAVE     &kp EXCL
-/* Low Left (8-13) & Right (27-22)*/ &none         &kp AMPERSAND &kp ASTERISK   &kp PERCENT    &trans          &trans             &trans         &trans        &trans        &kp TILDE     &none         &none
+&kp LBRC  &kp RBRC  &kp LPAR  &kp RPAR  &none  &none  &none  &none  &kp AT  &kp HASH  &kp DOLLAR  &none  &none  &kp AMPERSAND  &kp ASTERISK  &kp PERCENT  &kp EXCL  &kp GRAVE  &kp DQT  &kp UNDERSCORE  &kp TILDE  &trans  &trans  &trans  &kp BACKSLASH  &kp PIPE  &kp EQUAL  &kp CARET
             >;
         };
 
         BT {
             label = "bt";
             bindings = <
-/* Top (0-3 | 17-14) */             &none         &none         &none          &none                                                            &none         &none         &none         &none
-/* Mid (4-7 | 21-18) */             &trans        &trans        &none          &none                                                            &none         &none         &trans        &trans
-/* Low Left (8-13) & Right (27-22)*/ &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL &none          &none           &none              &none          &none         &none         &none         &trans        &kp LC(LG(Q))
+&none  &none  &none  &none  &none  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL  &trans  &trans  &none  &none  &none  &none  &none  &none  &kp LC(LG(Q))  &trans  &trans  &none  &none  &none  &trans  &trans  &none  &none  &none  &none
             >;
         };
 
         LatinF {
             label = "FUN";
             bindings = <
-/* Top (0-3 | 17-14) */             &kp SQT       &kp SEMICOLON &kp LEFT_BRACKET &kp RIGHT_BRACKET                                              &trans        &kp F6        &kp F5        &kp F4
-/* Mid (4-7 | 21-18) */             &none         &none         &none          &kp BACKSLASH                                                    &none         &none         &none         &kp LC(LG(Q))
-/* Low Left (8-13) & Right (27-22)*/ &kp F10       &kp F7        &kp F8         &kp F9         &kp F11         &kp F12            &trans         &kp F3        &kp F2        &kp F1        &none         &none
+&kp SQT  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F10  &kp F7  &kp F8  &kp F9  &none  &none  &none  &kp BACKSLASH  &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(LG(Q))  &none  &none  &none  &none  &none  &kp F12  &none  &kp F1  &kp F2  &kp F3  &trans
             >;
         };
     };
