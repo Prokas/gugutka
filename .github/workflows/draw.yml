@@ -19,17 +19,17 @@ jobs:
 
       - run: pip install keymap-drawer
 
-      # 1. Prvo parsujemo ZMK keymap uz pomoć vašeg info.json fajla
+     
       - run: |
           keymap parse \
             -z config/googootkah.keymap \
-            --base-keymaps config/info.json \
+            -j config/info.json \
             > keymap.yaml
 
-      # 2. Zatim crtamo SVG iz sveže kreiranog keymap.yaml
+     
       - run: keymap draw keymap.yaml > keymap.svg
 
-      # 3. Sačuvamo novu sliku i yaml nazad na GitHub
+    
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
