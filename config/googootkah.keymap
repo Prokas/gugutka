@@ -1,4 +1,4 @@
-#ifdef ZILPZALP_BLE_FLAG
+#ifdef googotkah_BLE_FLAG
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -48,7 +48,7 @@
             >;
         };
 
-        #ifdef ZILPZALP_BLE_FLAG
+        #ifdef googotkah_BLE_FLAG
 
         BT {
             label = "bt";
