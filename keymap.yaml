@@ -1,0 +1,194 @@
+layers:
+  default:
+  - W
+  - E
+  - R
+  - T
+  - Z
+  - U
+  - I
+  - O
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LSHFT}
+  - {t: G, h: RALT}
+  - {t: N, h: RALT}
+  - {t: J, h: RSHFT}
+  - {t: K, h: RGUI}
+  - {t: L, h: LALT}
+  - {t: A, h: LCTRL}
+  - C
+  - V
+  - B
+  - {t: X, h: numbers}
+  - {t: SPACE, h: navigation}
+  - {t: BSPC, h: symbols}
+  - {t: H, h: BT}
+  - M
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: P, h: RCTRL}
+  numbers:
+  - TAB
+  - Gui+ M
+  - ''
+  - Ctl+ UP
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - {t: KP MINUS, h: LALT}
+  - {t: KP ASTERISK, h: LGUI}
+  - {t: KP SLASH, h: LSHFT}
+  - RALT
+  - ''
+  - '4'
+  - '5'
+  - '6'
+  - {t: KP PLUS, h: LCTRL}
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - ''
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  navigation:
+  - ''
+  - ''
+  - DEL
+  - VOL DN
+  - VOL UP
+  - PLAY PAUSE
+  - <
+  - '>'
+  - Alt+Ctl+Gui+ UP ARROW
+  - {t: LGUI, h: sticky}
+  - {t: LSHFT, h: sticky}
+  - Gui+ C
+  - MUTE
+  - ''
+  - ''
+  - UP
+  - Gui+Ctl+Alt+ M
+  - Ctl+Alt+Gui+ LEFT
+  - Alt+Ctl+Gui+ RIGHT
+  - ''
+  - Gui+ V
+  - {t: Alt+Ctl+Gui+ RIGHT, type: held}
+  - +
+  - '-'
+  - ''
+  - LEFT ARROW
+  - DOWN
+  - RIGHT
+  symbols:
+  - '{'
+  - '}'
+  - (
+  - )
+  - ''
+  - ''
+  - ''
+  - ''
+  - '@'
+  - '#'
+  - $
+  - ''
+  - ''
+  - '&'
+  - '*'
+  - '%'
+  - '!'
+  - '`'
+  - '"'
+  - _
+  - '~'
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - \
+  - '|'
+  - '='
+  - ^
+  BT:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - BT CLR ALL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Ctl+Gui+ Q
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  LatinF:
+  - ''''
+  - ;
+  - '['
+  - ']'
+  - F10
+  - F7
+  - F8
+  - F9
+  - ''
+  - ''
+  - ''
+  - \
+  - F11
+  - F4
+  - F5
+  - F6
+  - Ctl+Gui+ Q
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F12
+  - ''
+  - F1
+  - F2
+  - F3
+  - {t: ▽, type: trans}
+combos:
+- p: [4, 5]
+  k: Y
+  l: [default, numbers, BT, symbols, navigation]
+- p: [0, 1]
+  k: Q
+  l: [default, numbers, BT, symbols, navigation]
+- p: [8, 9]
+  k: TAB
+  l: [default, numbers, BT, symbols, navigation]
+- p: [17, 19]
+  k: ESC
+  l: [default, numbers, BT, symbols, navigation]
+- p: [24, 26]
+  k: ENTER
+  l: [default, numbers, BT, symbols, navigation]
+- p: [25, 26]
+  k: '?'
+  l: [default, numbers, BT, symbols, navigation]
