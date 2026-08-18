@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
-/* Layer definicije */
+/* Layer definition */
 #define DEF 0
 #define BAS 0
 #define NUM 1
