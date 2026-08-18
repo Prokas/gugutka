@@ -1,0 +1,40 @@
+name: "Draw Keymap"
+on:
+  push:
+    paths:
+      - "config/**"
+      - ".github/workflows/draw.yml"
+  workflow_dispatch:
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install Keymap Drawer
+        run: pip install keymap-drawer
+
+      - name: Parse ZMK Keymap using local info.json
+        run: |
+          keymap parse \
+            -z config/boards/shields/googootkah/googootkah.keymap \
+            --base-keymaps config/boards/shields/googootkah/info.json \
+            > keymap.yaml
+
+      - name: Draw SVG
+        run: keymap draw keymap.yaml > keymap.svg
+
+      - name: Commit and push generated SVG
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add keymap.svg keymap.yaml
+          git commit -m "auto: update keymap SVG [skip ci]" || exit 0
+          git push
