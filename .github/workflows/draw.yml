@@ -20,16 +20,12 @@ jobs:
       - run: pip install keymap-drawer
 
      
-      - run: |
-          keymap parse \
-            -z config/googootkah.keymap \
-            -j config/info.json \
-            > keymap.yaml
+      - run: keymap parse -z config/googootkah.keymap > keymap.yaml
+
+      
+      - run: keymap draw keymap.yaml -j config/info.json > keymap.svg
 
      
-      - run: keymap draw keymap.yaml > keymap.svg
-
-    
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
