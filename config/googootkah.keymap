@@ -19,7 +19,7 @@
         default {
             label = "DEF";
             bindings = <
-&kp W  &kp E  &kp R  &kp T  &kp Z  &kp U  &kp I  &kp O  &hl LALT S  &hl LGUI D  &hl LSHFT F  &hl RALT G  &hr RALT N  &hr RSHFT J  &hr RGUI K  &hr LALT L  &hl LCTRL A  &kp C  &kp V  &kp B  &my_lt NUM X  &my_lt NAV SPACE  &my_lt SYM BSPC  &my_lt latin H  &kp M  &comsem  &dotcol  &hr RCTRL P
+&kp W  &kp E  &kp R  &kp T  &kp Z  &kp U  &kp I  &kp O  &hl LALT S  &hl LGUI D  &hl LSHFT F  &hl RALT G  &hr RALT N  &hr RSHFT J  &hr RGUI K  &hr LALT L  &hl LCTRL A  &kp C  &kp V  &kp B  &my_lt NUM X  &my_lt NAV SPACE  &my_lt SYM BSPC  &my_lt LAT H  &kp M  &comsem  &dotcol  &hr RCTRL P
             >;
         };
 
@@ -51,8 +51,8 @@
             >;
         };
 
-        LAT {
-            label = "latin";
+        Latin {
+            label = "LAT";
             bindings = <
 &kp SQT  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F10  &kp F7  &kp F8  &kp F9  &none  &none  &none  &kp BACKSLASH  &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(LG(Q))  &none  &none  &none  &none  &none  &kp F12  &none  &kp F1  &kp F2  &kp F3  &trans
             >;
