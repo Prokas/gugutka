@@ -22,15 +22,13 @@ jobs:
 
       - run: pip install "tree-sitter~=0.21.3" keymap-drawer
 
-      - name: Parse ZMK keymap
-        run: keymap parse -z config/googootkah.keymap > keymap.yaml
+      
+      - run: keymap parse -z config/googootkah.keymap > keymap.yaml
 
-      - name: Patch YAML layout key
-        run: sed -i 's/zmk_keyboard: googootkah/qmk_keyboard: googootkah/' keymap.yaml
+    
+      - run: keymap draw keymap.yaml -j config/info.json -l LAYOUT > keymap.svg
 
-      - name: Draw SVG keymap
-        run: keymap draw keymap.yaml -j config/info.json > keymap.svg
-
+     
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
