@@ -7,7 +7,7 @@ layers:
   - Z
   - U
   - I
-  - '&td_bt_clr'
+  - O
   - {t: S, h: LALT}
   - {t: D, h: LGUI}
   - {t: F, h: LSHFT}
