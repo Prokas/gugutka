@@ -18,8 +18,8 @@
         compatible = "zmk,combos";
 
         combo_soft_off {
-            timeout-ms = <0ms>;                 
-            key-positions = <0 27>;           
+            timeout-ms = <50ms>;                 
+            key-positions = <0 23>;           
             bindings = <&soft_off>;            
             layers = <0>;                      
         };
