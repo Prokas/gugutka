@@ -13,20 +13,12 @@
  */
 
 / {
-    behaviors {
-        td_bt_clr: tap_dance_bt_clear {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp O>, <&kp O>, <&kp O>, <&kp O>, <&bt BT_CLR_ALL>;
-        };
-   };
 
     combos {
         compatible = "zmk,combos";
 
         combo_soft_off {
-            timeout-ms = <50>;                 
+            timeout-ms = <0ms>;                 
             key-positions = <0 27>;           
             bindings = <&soft_off>;            
             layers = <0>;                      
