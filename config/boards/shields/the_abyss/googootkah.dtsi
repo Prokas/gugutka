@@ -50,33 +50,28 @@ nice_view_spi: &spi0 {
         >;
     };
 
-    // Composite kscan spaja izvor za buđenje i ostale tastere
     default_kscan: kscan {
         compatible = "zmk,kscan-composite";
         label = "KSCAN";
         rows = <1>;
         columns = <14>;
 
-        // Tasteri pre G (W, E, R, T) -> kolone 0, 1, 2, 3
         keys_before_g {
             kscan = <&kscan_before_g>;
             column-offset = <0>;
         };
 
-        // Jedini taster koji budi tastaturu (G: gpio0 9) -> kolona 4
         wakeup_key {
             kscan = <&kscan_wakeup>;
             column-offset = <4>;
         };
 
-        // Tasteri posle G -> kolone 5 do 13
         keys_after_g {
             kscan = <&kscan_after_g>;
             column-offset = <5>;
         };
     };
 
-    // Tasteri PRE G (ne bude tastaturu)
     kscan_before_g: kscan_before_g {
         compatible = "zmk,kscan-gpio-direct";
         input-gpios =
@@ -86,7 +81,6 @@ nice_view_spi: &spi0 {
             <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 
-    // Poseban kscan SAMO za taster G (gpio0 9)
     kscan_wakeup: kscan_wakeup {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
@@ -94,7 +88,6 @@ nice_view_spi: &spi0 {
             <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 
-    // Tasteri POSLE G (ne bude tastaturu)
     kscan_after_g: kscan_after_g {
         compatible = "zmk,kscan-gpio-direct";
         input-gpios =
