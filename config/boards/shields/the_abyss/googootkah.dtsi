@@ -53,6 +53,7 @@ nice_view_spi: &spi0 {
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-direct";
         label = "KSCAN";
+        wakeup-source = <4>;
         // top left to bottom right
         input-gpios =
             <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
