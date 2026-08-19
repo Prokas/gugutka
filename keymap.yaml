@@ -108,7 +108,7 @@ layers:
   - '"'
   - _
   - '~'
-  - {t: ▽, type: trans}
+  - '&my_lt 4'
   - {type: held}
   - {t: ▽, type: trans}
   - \
