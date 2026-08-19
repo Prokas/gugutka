@@ -277,6 +277,13 @@ path.combo {
 <rect rx="6" ry="6" x="658" y="127" width="28" height="26" class="combo"/>
 <text x="672" y="140" class="combo tap">?</text>
 </g>
+<g class="combo combopos-6">
+<path d="M266,70 l-164,-38" class="combo"/>
+<path d="M266,70 l-165,63" class="combo"/>
+<path d="M266,70 l359,13" class="combo"/>
+<rect rx="6" ry="6" x="252" y="57" width="28" height="26" class="combo"/>
+<text x="266" y="70" class="combo tap"><tspan style="font-size: 78%">&amp;soft_off</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 224)" class="layer-numbers">
