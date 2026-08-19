@@ -192,6 +192,6 @@ combos:
 - p: [25, 26]
   k: '?'
   l: [default]
-- p: [0, 23]
+- p: [0, 3]
   k: '&soft_off'
   l: [default]
