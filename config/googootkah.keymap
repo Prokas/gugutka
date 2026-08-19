@@ -27,7 +27,7 @@
 
         combo_soft_off {
             timeout-ms = <50>;                 
-            key-positions = <0 3 17 14>;           
+            key-positions = <0 3 4 7>;           
             bindings = <&soft_off>;            
             layers = <0>;                      
         };
