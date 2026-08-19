@@ -31,7 +31,7 @@
         default {
             label = "DEF";
             bindings = <
-&kp W  &kp E  &kp R  &kp T  &kp Z  &kp U  &kp I  &td_bt_clr  &hl LALT S  &hl LGUI D  &hl LSHFT F  &hl RALT G  &hr RALT N  &hr RSHFT J  &hr RGUI K  &hr LALT L  &hl LCTRL A  &kp C  &kp V  &kp B  &my_lt NUM X  &my_lt NAV SPACE  &my_lt SYM BSPC  &my_lt LAT H  &kp M  &comsem  &dotcol  &hr RCTRL P
+&kp W  &kp E  &kp R  &kp T  &kp Z  &kp U  &kp I  &kp O  &hl LALT S  &hl LGUI D  &hl LSHFT F  &hl RALT G  &hr RALT N  &hr RSHFT J  &hr RGUI K  &hr LALT L  &hl LCTRL A  &kp C  &kp V  &kp B  &my_lt NUM X  &my_lt NAV SPACE  &my_lt SYM BSPC  &my_lt LAT H  &kp M  &comsem  &dotcol  &hr RCTRL P
             >;
         };
 
