@@ -50,57 +50,63 @@ nice_view_spi: &spi0 {
         >;
     };
 
+    // Composite kscan spaja izvor za buđenje i ostale tastere
     default_kscan: kscan {
         compatible = "zmk,kscan-composite";
         label = "KSCAN";
         rows = <1>;
         columns = <14>;
 
-        keys_before_g {
-            kscan = <&kscan_before_g>;
+        // Indeksi 0, 1, 2, 3 (Tasteri pre G)
+        keys_0_to_3 {
+            kscan = <&kscan_0_to_3>;
             column-offset = <0>;
         };
 
+        // Indeks 4 (Taster G: gpio0 9 - JEDINI KOJI BUDI)
         wakeup_key {
             kscan = <&kscan_wakeup>;
             column-offset = <4>;
         };
 
-        keys_after_g {
-            kscan = <&kscan_after_g>;
+        // Indeksi 5 do 13 (Ostali tasteri posle G)
+        keys_5_to_13 {
+            kscan = <&kscan_5_to_13>;
             column-offset = <5>;
         };
     };
 
-    kscan_before_g: kscan_before_g {
+    // Tasteri 0-3
+    kscan_0_to_3: kscan_0_to_3 {
         compatible = "zmk,kscan-gpio-direct";
         input-gpios =
-            <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 0
+            <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 1
+            <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 2
+            <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Indeks 3
     };
 
+    // Taster 4 (G) - sa wakeup-source
     kscan_wakeup: kscan_wakeup {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
         input-gpios =
-            <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            <&gpio0 9  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Indeks 4
     };
 
-    kscan_after_g: kscan_after_g {
+    // Tasteri 5-13
+    kscan_5_to_13: kscan_5_to_13 {
         compatible = "zmk,kscan-gpio-direct";
         input-gpios =
-            <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 5
+            <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 6
+            <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 7
 
-            <&gpio1 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio1 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio1 0  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        ;
+            <&gpio1 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 8
+            <&gpio1 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 9
+            <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 10
+            <&gpio1 0  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 11
+            <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Indeks 12
+            <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Indeks 13
     };
 };
