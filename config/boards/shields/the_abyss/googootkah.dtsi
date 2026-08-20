@@ -1,4 +1,4 @@
-include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/matrix_transform.h>
 
 // nice!view setup
 &pinctrl {
@@ -27,6 +27,7 @@ nice_view_spi: &spi0 {
     cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
 };
 
+
 &pro_micro_i2c {
     status = "disabled";
 };
@@ -36,7 +37,6 @@ nice_view_spi: &spi0 {
     chosen {
         zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
-        zmk,wakeup-key = &wakeup_key;
     };
 
     default_transform: keymap_transform_0 {
@@ -53,6 +53,7 @@ nice_view_spi: &spi0 {
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-direct";
         label = "KSCAN";
+        // top left to bottom right
         input-gpios =
             <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
             <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
@@ -73,9 +74,10 @@ nice_view_spi: &spi0 {
         ;
     };
 
-    wakeup_key: wakeup_key {
-        compatible = "zmk,gpio-key";
+
+    wakeup_g_key: wakeup_g_key {
+        compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
-        gpios = <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        input-gpios = <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
